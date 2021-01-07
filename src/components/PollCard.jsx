@@ -27,7 +27,7 @@ const PollCard=()=>{
     const pollObj=useGetPoll(encodeURI(id));
     useEffect(()=>{
         setPoll(pollObj);
-    })
+    },[pollObj])
     
     const {question,answers}={...poll};
     const vote=(e)=>{
